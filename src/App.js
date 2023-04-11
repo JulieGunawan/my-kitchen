@@ -6,8 +6,7 @@ import Blogs from './pages/Blogs';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
 
-
-export function App() {
+function App() {
   return (
     <BrowserRouter>
       <div className='App'>

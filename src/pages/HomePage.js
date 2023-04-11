@@ -4,17 +4,17 @@ import React from 'react';
 
 const HomePage = () =>{
     return(
-      <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/categories">Categories</Link>
-          <Link to="/contact">Contact Us</Link>
-        </nav>
-        <ul>
-          <li>Mix and Match</li>
-          <li>Desserts</li>
-        </ul>
-      </div>
+      <>
+        <div className="hero-left">
+          <h1>Welcome to My Wonderful Kitchen</h1>
+          <p>This is the place where you can find options of food you'd dare to try. 
+            Also, you'll be surprised if they turn out to be tasty.</p>
+          <button><a href="./categories">Check it Out</a></button>
+        </div>
+        <div className="hero-right">
+
+        </div>
+      </>
     );
 }
 

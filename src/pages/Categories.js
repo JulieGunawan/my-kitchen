@@ -5,11 +5,6 @@ import React from 'react';
 const Categories = () =>{
     return(
         <div>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/categories">Categories</Link>
-            <Link to="/contact">Contact Us</Link>
-          </nav>
           <ul>
             <li>Mix and Match</li>
             <li>Desserts</li>
