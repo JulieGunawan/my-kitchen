@@ -5,15 +5,10 @@ import React from 'react';
 const Blogs = () => {
     return (
       <div>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/categories">Categories</Link>
-          <Link to="/contact">Contact Us</Link>
-        </nav>
-        <ul>
-          <li>Mix and Match</li>
-          <li>Desserts</li>
-        </ul>
+        <h1>Welcome to my blogs</h1>
+        <p>In this page, I will be discussing 
+          about how to be more creative when it comes to food.
+          Food is life, thus we need to enjoy it.</p>
       </div>
     );
 }

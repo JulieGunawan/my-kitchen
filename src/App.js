@@ -5,6 +5,7 @@ import Contact from './pages/Contact';
 import Blogs from './pages/Blogs';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
+import ArticlePage from './pages/ArticlePage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <nav>
             <Link to="/">Home</Link>
             <Link to="/categories">Categories</Link>
+            <Link to="/blogs">Blogs</Link>
             <Link to="/contact">Contact Us</Link>
           </nav>
         </div>
@@ -23,6 +25,7 @@ function App() {
             <Route path="/categories" element={<Categories />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:articleId" element={<ArticlePage />} />
           </Routes>
         </div>
       </div>
