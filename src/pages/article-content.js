@@ -1,17 +1,17 @@
-const article = [
+const articles = [
     {
         name:'first-blog',
         title:'My First Blog Here',
         content: [
-            yada yada yada 
+            `yada yada yada` 
         ]
     },
     {
         name:"second-blog",
         title:"My Second Blog",
         content:[
-            bla bla bla
+            `bla bla bla`
         ]
     },
 ]
-export default article;
+export default articles;
