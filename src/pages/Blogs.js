@@ -11,10 +11,10 @@ const Blogs = () => {
           about how to be more creative when it comes to food.
           Food is life, thus we need to enjoy it.</p>
         {articles.map(article => (
-          <div>
+          <Link key={article.name} className="blogs-item" to={`/blogs/${article.name}`}>
             <h3>{article.title}</h3>
-            <p>{article.content[0].substring(0, 150)}</p>
-          </div>
+            <p>{article.content[0].substring(0, 150)}...</p>
+          </Link>
         ))}
 
       </>
