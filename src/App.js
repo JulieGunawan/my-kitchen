@@ -6,6 +6,7 @@ import Blogs from './pages/Blogs';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
 import ArticlePage from './pages/ArticlePage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:articleId" element={<ArticlePage />} />
+            <Route path="*" element={<NotFound/> } />
           </Routes>
         </div>
       </div>
