@@ -2,6 +2,7 @@ import '../App.css';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import articles from './article-content';
+import NotFound from './NotFound';
 
 const ArticlePage = () =>{
   //params is an object whose keys are the name of the url parameter eg :articleId in app.js
@@ -11,6 +12,11 @@ const ArticlePage = () =>{
   const article = articles.find(article => 
     article.name === articleId
   );
+
+  if(!article){
+    return <NotFound />
+  }
+
     return(
         <>
           <h1>{article.title}</h1>
