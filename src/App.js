@@ -35,7 +35,8 @@ function App() {
   );
 }
 
-const response= await axios.get('http://localhost:8000/api/articles/first-blog');
-const data=response.data;
+
+//const response= await axios.get('http://localhost:8000/api/articles/first-blog');
+//const data=response.data;
 
 export default App;
