@@ -11,12 +11,13 @@ const ArticlePage = () =>{
   
   //if there is a change in upvote, update the data
   useEffect(()=> {
-    const loadArticle = async() =>{
+    const loadArticleVote = async() =>{
     const response= await axios.get(`/api/articles/${articleId}`);
     const articleUpvoteCount=response.data;
     //setArticleInfo({upvotes: 3, comments: []},[]);
-    setArticleInfo(articleUpvoteCount);}
-    loadArticle();
+    setArticleInfo(articleUpvoteCount);
+    }
+    loadArticleVote();
   });
   //params is an object whose keys are the name of the url parameter eg :articleId in app.js
   //the key is :articleId and the value is the json value from article-content
