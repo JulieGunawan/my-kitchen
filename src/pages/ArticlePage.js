@@ -12,7 +12,7 @@ const ArticlePage = () =>{
   //if there is a change in upvote, update the data
   useEffect(()=> {
     const loadArticle = async() =>{
-    const response= await axios.get(`http://localhost:8000/api/articles/${articleId}`);
+    const response= await axios.get(`/api/articles/${articleId}`);
     const articleUpvoteCount=response.data;
     //setArticleInfo({upvotes: 3, comments: []},[]);
     setArticleInfo(articleUpvoteCount);}
