@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import articles from './article-content';
+import CommentList from '../components/CommentList'
 import NotFound from './NotFound';
 
 const ArticlePage = () =>{
   const [articleInfo, setArticleInfo] = useState({upvotes:0, comments:[]}); 
-  
   //if there is a change in upvote, update the data
   useEffect(()=> {
     const loadArticleVote = async() =>{
@@ -35,10 +35,11 @@ const ArticlePage = () =>{
     return(
         <>
           <h1>{article.title}</h1>
-          <p>This article has {articleInfo.upvotes} upvote(s)</p>
           {article.content.map((paragraph,i) => (
             <p key={i}>{paragraph}</p>
           ))}
+          <p>This article has {articleInfo.upvotes} upvote(s)</p>
+          <CommentList comments={articleInfo.comments}/>
         </>
       );
 }
