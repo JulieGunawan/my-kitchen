@@ -18,7 +18,7 @@ const ArticlePage = () =>{
     setArticleInfo(articleUpvoteCount);
     }
     loadArticleVote();
-  });
+  }, []);
   //params is an object whose keys are the name of the url parameter eg :articleId in app.js
   //the key is :articleId and the value is the json value from article-content
   const params = useParams();
@@ -27,6 +27,13 @@ const ArticlePage = () =>{
   const article = articles.find(article => 
     article.name === articleId
   );
+
+  const addVote = async () => {
+    const res = await axios.put(`/api/articles/${articleId}/upvote`);
+    const updatedArticle = res.data;
+    setArticleInfo(updatedArticle);
+
+  }
 
   if(!article){
     return <NotFound />
@@ -38,7 +45,10 @@ const ArticlePage = () =>{
           {article.content.map((paragraph,i) => (
             <p key={i}>{paragraph}</p>
           ))}
-          <p>This article has {articleInfo.upvotes} upvote(s)</p>
+          <div className="upvote"> 
+            <button onClick={addVote}>Give a thumbs up</button>
+            <p>This article has {articleInfo.upvotes} upvote(s)</p>
+          </div>
           <CommentList comments={articleInfo.comments}/>
         </>
       );

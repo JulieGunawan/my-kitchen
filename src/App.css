@@ -48,6 +48,11 @@ nav a{
 .App-link {
   color: #61dafb;
 }
+.upvote{
+  max-width:700px;
+  padding:25px;
+  margin: 0 auto;
+}
 
 @keyframes App-logo-spin {
   from {
